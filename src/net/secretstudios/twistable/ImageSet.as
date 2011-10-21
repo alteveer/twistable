@@ -1,4 +1,4 @@
-﻿package net.secretstudios.twisty {
+﻿package net.secretstudios.twistable {
 	import br.com.stimuli.loading.BulkProgressEvent
 	import flash.display.Bitmap
 	import flash.display.Loader
@@ -110,7 +110,6 @@
 		}
 		
 		public function draw_image(image:Number, zoom:Number = .5):void {
-			trace(image)
 			with(graphics) {
 				beginBitmapFill(image_set["image" + image].bitmapData)
 				drawRect(0, 0, stage_dimensions.x, stage_dimensions.y)

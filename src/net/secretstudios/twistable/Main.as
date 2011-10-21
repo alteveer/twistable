@@ -1,4 +1,4 @@
-﻿package net.secretstudios.twisty {
+﻿package net.secretstudios.twistable {
 	
 	import flash.display.Sprite
 	import flash.events.Event
@@ -11,7 +11,7 @@
 	public class Main extends Sprite {
 		private var previous_x:Number = 0
 		private var current_image:Number = 0
-		private const SPIN_SPEED:Number = 0.1
+		private const SPIN_SPEED:Number = 0.01
 		public const DEFAULT_PATH:String = "images/sample"
 		public const SET_LENGTH:Number = 60
 		public const FILE_EXTENSION:String = "jpg"
@@ -48,12 +48,17 @@
 			stage.addEventListener(MouseEvent.MOUSE_MOVE, scrub)
 		}
 		
+		private var spin_marker:Number = 0;
 		protected function scrub(e:MouseEvent):void {
 			if (e.buttonDown) {
 				//every time the mouse moves find how far on X and add that to the spinner's rotation.
 				//spinner.rotation += (mouseX - previous_x) * SPIN_SPEED
 				//trace((mouseX - previous_x) * SPIN_SPEED)
-				current_image += Math.round(((mouseX - previous_x) * SPIN_SPEED) % (image_set._set_length -1))
+				spin_marker = (mouseX - previous_x)
+				trace(mouseX)
+				current_image += Math.round((spin_marker * SPIN_SPEED) % (image_set._set_length -1))
+				
+				trace(spin_marker)
 				if (current_image < 0) {
 					current_image = image_set._set_length -1
 				} 
