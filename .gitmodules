@@ -1,0 +1,3 @@
+[submodule "lib/bulkloader"]
+	path = lib/bulkloader
+	url = https://github.com/arthur-debert/BulkLoader.git

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>twistable</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<script src="javascript/swfobject.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var flashvars = {
+			image_path: "images/sample"
+		};
+		var params = {
+			menu: "false",
+			scale: "noScale"
+		};
+		
+		swfobject.embedSWF("twistable.swf", "altContent", "800", "500", "10.0.0", "expressInstall.swf", flashvars, params);
+	</script>
+	<style>
+		html, body { height:100%; }
+		#wrapper { width: 800px; margin:0 auto; }
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="altContent">
+			<h1>twistable</h1>
+			<p>Oh my! No Flash!</p>
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img 
+				src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
+				alt="Get Adobe Flash player" /></a></p>
+		</div>
+	</div>
+</body>
+</html>
